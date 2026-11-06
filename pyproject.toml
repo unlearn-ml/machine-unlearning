@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "machine-unlearning"
+version = "0.0.1"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=1.26",
+  "scikit-learn>=1.4",
+  "torch>=2.6",
+  "torchvision>=0.21",
+]
+
+[project.scripts]
+mu = "machine_unlearning.cli:main"
+
+[project.urls]
+Repository = "https://github.com/unlearn-ml/machine-unlearning"
+
+[tool.setuptools]
+packages = ["machine_unlearning"]
